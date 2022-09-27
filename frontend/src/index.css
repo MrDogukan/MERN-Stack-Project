@@ -37,7 +37,7 @@ header a {
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  gap: 50px;
 }
 .workout-details {
   background: #fff;
@@ -46,6 +46,7 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  min-width: 170px;
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -102,4 +103,24 @@ div.error {
 
 input.error {
   border: 1px solid var(--error);
+}
+
+span:hover {
+  background-color: var(--success);
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+}
+
+@media screen and (max-width: 850px) {
+  .home {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
 }
