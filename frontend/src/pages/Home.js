@@ -9,9 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch(
-        "http://backend-workouts.herokuapp.com/api/workouts"
-      );
+      const response = await fetch("/api/workouts");
       const json = await response.json();
 
       if (response.ok) {
